@@ -1,0 +1,25 @@
+function rot13(str)
+ {
+   var newstr = ''
+for(let i=0; i < str.length ; i++)
+{
+if(str[i].match(/[A-Z]/i) )
+{
+   if((str[i].charCodeAt() + 13) > 90)
+    {
+      newstr += String.fromCharCode(str[i].charCodeAt()-13)    
+    }
+    else if( (str[i].charCodeAt() + 13) <= 90)
+    {
+     newstr +=  String.fromCharCode(str[i].charCodeAt()+13)
+
+    }
+  }
+  else{
+    newstr += String.fromCharCode(str[i].charCodeAt())
+  }
+}
+return newstr
+ }
+// Change the inputs below to test
+console.log(rot13("SERR CVMMN!"));
