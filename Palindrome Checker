@@ -1,0 +1,15 @@
+function palindrome(str) {
+  var newStr= str.split(/([_\W])/)
+ var result = newStr.toString().replace(/[_ | \W]/g,'').toLowerCase();
+ let final = result.split('').join('');
+ 
+ var final1 = result.split('').reverse().join('')
+
+
+if(final === final1)
+  return true
+else
+  return false
+
+}
+console.log(palindrome("almostomla"));
